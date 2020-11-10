@@ -1,4 +1,4 @@
-#include "Functions.h"
+#include "functions.h"
 
 int Sum(int a, int b)
 {

@@ -3,8 +3,7 @@
 #include "functions.h"
 #include "types.h"
 
-// int main(int argc, char **argv)
-int main()
+int main(int argc, char **argv)
 {
   int p = 4;
   printf("Address of var is: %p", &p);
