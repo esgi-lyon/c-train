@@ -5,7 +5,8 @@
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
         "ms-vscode.cpptools",
-        "jeff-hykin.better-cpp-syntax",
+		"jeff-hykin.better-cpp-syntax",
+		"emeraldwalk.runonsave",
 		// "ms-vscode.cmake-tools",
         "cschlosser.doxdocgen"
 	],

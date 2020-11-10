@@ -11,9 +11,13 @@ INC_DIRS := $(shell find $(SRC_DIRS) -type d)
 INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
 CPPFLAGS ?= $(INC_FLAGS) -MMD -MP
+EXECUTE=chmod +x $@ && $@
 
 $(BUILD_DIR)/$(TARGET_EXEC): $(OBJS)
-	$(CC) $(OBJS) -o $@ $(LDFLAGS)
+	@$(CC) $(OBJS) -o $@ $(LDFLAGS)
+	@echo ""
+	@$(call EXECUTE)
+	@echo "\n"
 
 # assembly
 $(BUILD_DIR)/%.s.o: %.s

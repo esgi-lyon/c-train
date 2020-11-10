@@ -1,0 +1,5 @@
+# C starter
+
+# run
+
+`make`
