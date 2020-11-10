@@ -4,7 +4,7 @@
     "autoClearConsole": true,
     "commands": [{
             "match": "\\.c$",
-            "cmd": "clear && make"
+            "cmd": "make"
         }]
     },
     "files.associations": {
