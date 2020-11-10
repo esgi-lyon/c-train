@@ -25,4 +25,4 @@ winget install -e --id GnuWin32.Make
 winget install -e --id Bloodshed.Dev-C++
 ```
 or
-`choco install llvm` copy 'CC:=clang' in the top of [Makefile](Makefile)
+`choco install llvm` copy `CC:=clang` in the top of [Makefile](Makefile)
