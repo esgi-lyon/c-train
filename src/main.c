@@ -4,6 +4,7 @@
 #include "types.h"
 #include "pointers.h"
 #include "bit.h"
+#include "arrays.h"
 
 int main(int argc, char **argv)
 {
@@ -25,9 +26,11 @@ int main(int argc, char **argv)
   // User enum
   printf("\nWeektype day id : %d", Mon);
   // Pointers
-  pointerPlay();
+  memoryPlay();
   // bits
   bitPlay();
+	// Arrays
+	arraysPlay();
 
   return TRUE;
 }
