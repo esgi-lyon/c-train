@@ -13,6 +13,7 @@
         "*.yml": "yaml",
         "numeric": "c",
         "ratio": "c",
-        "*.tcc": "c"
+        "*.tcc": "c",
+        "cstdlib": "c"
     }
 }

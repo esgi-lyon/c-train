@@ -11,10 +11,11 @@ INC_DIRS := $(shell find $(SRC_DIRS) -type d)
 INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
 CPPFLAGS ?= $(INC_FLAGS) -MMD -MP
-EXECUTE=chmod +x $@ && $@
+EXECUTE = chmod +x $@ && $@
+CFLAGS := -Wall -Wextra -Werror --std=c99
 
 $(BUILD_DIR)/$(TARGET_EXEC): $(OBJS)
-	@$(CC) $(OBJS) -o $@ $(LDFLAGS)
+	@$(CC) $(OBJS) -o $@ $(LDFLAGS) $(CFLAGS)
 	@echo ""
 	@$(call EXECUTE)
 	@echo "\n"
