@@ -3,10 +3,10 @@
 
 void pointerPlay() 
 {
-    int *p1;
-    double *p2;
-    char *p3;
-    float *p4;
+    int* p1;
+    double* p2;
+    char* p3;
+    float* p4;
     printf("\npointer address %p", (void *) &p4);
 }
 

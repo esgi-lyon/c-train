@@ -12,6 +12,7 @@ int main(int argc, char **argv)
   struct Books Book1;
   strcpy(Book1.author, "Nuha Ali"); 
   Book1.id = 1;
+  
   pointerPlay();
 
   return TRUE;
