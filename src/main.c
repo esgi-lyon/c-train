@@ -7,21 +7,26 @@
 
 int main(int argc, char **argv)
 {
-  if (argc > 0) {
-    char const *option =  argv[1];
-    printf("opt : %s", option);
+  // Fetch args
+  char const *option = argv[0];
+  char argvArr[argc];
+  printf("file running : %s", option);
+  if (argc > 1) {
+    printf("%c", argvArr[0]);
   }
-
+  // Address / use functions lib
   int p = 4;
   printf("\nAddress of var is: %p", &p);
   printf("\n%d", Sum(p, 4));
+  // Structs
   struct Books Book1;
-  strcpy(Book1.author, "Nuha Ali");
+  strcpy(Book1.author, "Benjamin aucul");
   Book1.id = 1;
-
+  // User enum
   printf("\nWeektype day id : %d", Mon);
-
+  // Pointers
   pointerPlay();
+  // bits
   bitPlay();
 
   return TRUE;
