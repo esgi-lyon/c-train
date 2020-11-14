@@ -12,31 +12,33 @@ void memoryPlay()
 {
   // Simple memory allocation
   float* p1 = malloc(sizeof(BUFF_SIZE));
-  printf("\naddress pointed to by pointer 3 : %p", p1);
-  printf("\npointer 3 address %p", &p1);
+  printf("\naddress pointed to by pointer 1 : %p", p1);
+  printf("\npointer 1 address %p", &p1);
+  printf("\npointer 1 pointed value %0.2f", *p1);
+
   // Allow a memory of max int authorized bits
   int* p2;
   p2 = (int*) malloc(sizeof(int));
-
-  // dynamic allocation (avoid segmentation error)
-  float* p4 = malloc(sizeof(*p4));
-  if (p4 == NULL)
-    goto end; // WTF goto
-
-  printf("\npointer address %p, %.6f", (void *) &p4, *p4);
 
   // complex calc
   int i = 1, j = 3;
   p2 = (int *) malloc(2 * sizeof(int));
   *p2 = i;
   *(p2 + 1) = j;
-  printf("\np = %ld \t *p=%d \t p+1=%ld\t*(p+1)=%d", (long) p2, *p2, (long) p2+1, *(p2+1));
+  printf("\np2 = %ld \t *p2=%d \t p2+1=%ld\t*(p2+1)=%d", (long) p2, *p2, (long) p2+1, *(p2+1));
 
-  return;
+  // dynamic allocation (avoid segmentation error)
+  float* p3 = malloc(sizeof(*p3));
+  if (p3 == NULL)
+    printf("\npointer 3 is null");
+    goto end; // WTF goto
+
+  printf("\npointer address %p, %.6f", (void *) &p3, *p3);
 
   end:
-    printf("\npointer is null");
-    free(p4);
+    free(p1); free(p2); free(p3);
+
+  return;
 }
 
 #endif
