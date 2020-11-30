@@ -1,7 +1,7 @@
 TARGET_EXEC ?= a.out
 
 BUILD_DIR ?= ./build
-SRC_DIRS ?= ./tp
+SRC_DIRS ?= ./pi
 
 SRCS := $(shell find $(SRC_DIRS) -name *.cpp -or -name *.c -or -name *.s)
 OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
@@ -18,7 +18,7 @@ $(BUILD_DIR)/$(TARGET_EXEC): $(OBJS)
 	@$(CC) $(OBJS) -o $@ $(LDFLAGS)
 	@echo ""
 	@$(call EXECUTE, $(ARGS))
-	@echo "\n\n"
+	@echo "\n"
 
 # assembly
 $(BUILD_DIR)/%.s.o: %.s
