@@ -1,13 +1,13 @@
 {
     "editor.mouseWheelZoom": false,
     "emeraldwalk.runonsave": {
-    "autoClearConsole": true,
-    "commands": [
-        {
-            "match": "\\.[c|h]",
-            "cmd": "make"
-        }
-    ]
+        "autoClearConsole": true,
+        "commands": [
+            {
+                "match": "\\.[c|h]",
+                "cmd": "make"
+            }
+        ]
     },
     "files.associations": {
         "*.yml": "yaml",

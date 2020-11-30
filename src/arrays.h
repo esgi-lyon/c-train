@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#ifndef POINTERS_ARRAYS_INCLUDED
-#define POINTERS_ARRAYS_INCLUDED
+#ifndef ARRAYS_INCLUDED
+#define ARRAYS_INCLUDED
 
 void arraysPlay() {
   int k = 3, n = 1;
