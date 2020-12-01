@@ -41,4 +41,36 @@ void memoryPlay()
   return;
 }
 
+int** multiDimensionInt(int N) {
+
+  int** a = malloc(sizeof *a *N);
+
+  if (!a)
+    return a;
+
+  for(int i = 0; i < N; i++) {
+    a[i] = malloc(sizeof *a[i]);
+  }
+
+  return a;
+}
+
+void testMultidimInt() {
+  int dimension = 3;
+  int** arr = multiDimensionInt(dimension);
+  printf("\nMultidim pointer address: %p", *arr);
+  // int depth = 0
+  // for ()
+}
+
+
+void pPP(char ch) {
+
+  int res = 0;
+  int* p = 0;
+  // for (int i = 0; i < (int) strlen(ch); i++)
+  //   *p++ = ch[i];
+
+}
+
 #endif

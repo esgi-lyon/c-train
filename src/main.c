@@ -17,7 +17,7 @@ int main(int argc, char **argv)
   }
   // Address / use functions lib
   int p = 4;
-  printf("\nAddress of var is: %p", &p);
+  printf("\nAddress of var p is: %p", &p);
   printf("\n%d", Sum(p, 4));
   // Structs
   struct Books Book1;
@@ -31,6 +31,8 @@ int main(int argc, char **argv)
   bitPlay();
 	// Arrays
 	arraysPlay();
+  // Multidim test
+  testMultidimInt();
 
   return TRUE;
 }
