@@ -63,7 +63,7 @@ void testMultidimInt() {
   // for ()
 }
 
-
+/*
 void pPP(char ch) {
 
   int res = 0;
@@ -72,5 +72,6 @@ void pPP(char ch) {
   //   *p++ = ch[i];
 
 }
+*/
 
 #endif

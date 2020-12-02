@@ -3,9 +3,9 @@
 #include <string.h>
 #include "sin.h"
 #include "leibniz.h"
+#include "eq.h"
 
-int main()
-{
+void sinExo() {
   printf("Pi step : \n");
   for (int n = 10; n <= 100000000; n*=10) {
     printf("\t n = %7i : pi= %.14f\n", n, Leibniz(n));
@@ -13,6 +13,19 @@ int main()
 
   printf("sin step : \n");
   printf("\t n = %7i : sin= %.2f\n", 3, userSin(3, 12));
+}
+
+
+
+/**
+ * @brief Main
+ *
+ * @return int
+ */
+int main()
+{
+  // sinExo();
+  equation(1, 9, 4);
 
   return 0;
 }
