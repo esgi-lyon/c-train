@@ -3,7 +3,7 @@ TARGET_EXEC ?= a.out
 BUILD_DIR ?= ./build
 # Available ./src ./pi
 # Usage : SRC_DIRS=./src make
-SRC_DIRS ?= ./pi
+SRC_DIRS ?= ./list
 
 SRCS := $(shell find $(SRC_DIRS) -name *.cpp -or -name *.c -or -name *.s)
 OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
