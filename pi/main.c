@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "sin.h"
 #include "leibniz.h"
 #include "eq.h"
@@ -16,7 +15,6 @@ void sinExo() {
 }
 
 
-
 /**
  * @brief Main
  *
@@ -24,7 +22,9 @@ void sinExo() {
  */
 int main()
 {
-  // sinExo();
+  printf("Exo Sinus\n");
+  sinExo();
+  printf("\nExo equation 2nd degree\n");
   equation(1, 9, 4);
 
   return 0;

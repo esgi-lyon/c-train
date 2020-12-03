@@ -7,7 +7,6 @@ typedef struct Books {
   int  id;
 } Books;
 
-
 // custom types
 typedef int *pt_int;
 
