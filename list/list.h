@@ -50,6 +50,19 @@ Node* insert(int el, Node* next) {
   return node;
 }
 
+void freeList(struct Node* n)
+{
+   struct Node* tmp;
+
+   while (n != NULL)
+    {
+       tmp = n;
+       n = n->next;
+       free(tmp);
+    }
+
+}
+
 /**
  * @brief print a list data structure
  *
@@ -74,7 +87,7 @@ void list() {
   printf("Single case ;\n");
   Node* head = insert(2, NULL);
   printList(head);
-  free(head);
+  freeList(head);
 
   printf("\nMultiple case ;\n");
   Node* head1 = insert(
@@ -85,7 +98,7 @@ void list() {
     )
   );
   printList(head1);
-  free(head1);
+  freeList(head1);
 }
 
 #endif
