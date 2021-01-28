@@ -9,7 +9,6 @@ typedef struct Node {
     struct Node* next;
 } Node;
 
-
 /**
  * @brief insert or create a node
  *
@@ -49,7 +48,7 @@ void list() {
   printList(head);
   free(head);
 
-  printf("\nMulitple case ;\n");
+  printf("\nMultiple case ;\n");
   Node* head2 = insert(2, insert(3, insert(2, NULL)));
   printList(head2);
   free(head2);

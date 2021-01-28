@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
+#include "binarytree.h"
 
 /**
  *
@@ -10,7 +11,9 @@
  */
 int main()
 {
-  list();
+  //list();
+
+  binarytree();
 
   return 0;
 }

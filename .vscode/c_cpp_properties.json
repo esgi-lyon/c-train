@@ -3,7 +3,7 @@
         {
             "name": "C / CPP",
             "includePath": [
-                "${workspaceFolder}/**"
+                "."
             ],
             "defines": [],
             "macFrameworkPath": [],

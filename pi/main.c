@@ -24,6 +24,7 @@ int main()
 {
   printf("Exo Sinus\n");
   sinExo();
+
   printf("\nExo equation 2nd degree\n");
   equation(1, 9, 4);
 
