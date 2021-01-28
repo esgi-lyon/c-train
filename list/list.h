@@ -7,6 +7,7 @@
 typedef struct Node {
     int data;
     struct Node* next;
+    struct Node* previous;
 } Node;
 
 /**
@@ -16,14 +17,37 @@ typedef struct Node {
  * @param l
  * @return Node*
  */
-Node* insert(int el, Node* l) {
+Node* _insert(int el, Node* next) {
     Node* node;
     node = (struct Node*)malloc(sizeof(struct Node));
 
     node->data = el;
-    node->next = l;
+    node->next = next;
 
     return (Node*) node;
+}
+
+/**
+ * @brief Proxy method to determine previous
+ *
+ * @param el
+ * @param next
+ * @return Node*
+ */
+Node* insert(int el, Node* next) {
+  Node* node = _insert(el, next);
+
+  Node* previousNode = NULL;
+  Node* currNode = node;
+
+  // set previous
+  while (currNode != NULL) {
+    currNode->previous = previousNode;
+    previousNode = currNode;
+    currNode = currNode->next;
+  }
+
+  return node;
 }
 
 /**
@@ -34,8 +58,12 @@ Node* insert(int el, Node* l) {
 void printList(struct Node* n)
 {
     while (n != NULL) {
-        printf(" %d ", n->data);
+        printf("(%d)", n->data);
+        if (n->previous != NULL) {
+          printf(" parent : %d", n->previous->data);
+        }
         n = n->next;
+        printf("\n");
     }
 }
 
@@ -49,9 +77,15 @@ void list() {
   free(head);
 
   printf("\nMultiple case ;\n");
-  Node* head2 = insert(2, insert(3, insert(2, NULL)));
-  printList(head2);
-  free(head2);
+  Node* head1 = insert(
+    1,
+    insert(
+      2,
+      insert(3, NULL)
+    )
+  );
+  printList(head1);
+  free(head1);
 }
 
 #endif

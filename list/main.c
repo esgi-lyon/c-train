@@ -11,9 +11,9 @@
  */
 int main()
 {
-  //list();
+  list();
 
-  binarytree();
+  // binarytree();
 
   return 0;
 }
